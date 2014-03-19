@@ -1,0 +1,9 @@
+{
+    "name": "crowdsourced-tutorial",
+    "version": "0.1.0",
+    "dependencies": {
+        "bootstrap": "3.0.3",
+        "jquery": "latest",
+        "ckeditor": "latest"
+    }
+}
