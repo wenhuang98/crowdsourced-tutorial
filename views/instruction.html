@@ -1,19 +1,20 @@
 <html>
 	<head>
 	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link href="css/instruction.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
 	<title>Crowdlab</title>
 	</head>
 	<body>
 
 				<div class="page-header" id="header">
 					<img src="img/logo.png" class="img-rounded">
-					<h3>Edit your instruction for each task</h3>
 				</div>
-				<textarea cols="30" id="editor" name="editor" rows="10">
-				</textarea>
-				<div class="submit-button"><button class="btn btn-default" type="submit" onclick="submit()">Submit</button></div>
-			</form>
+				<div id="main-container">
+					<h3> Edit instruction for each task </h3>
+					<textarea cols="30" id="editor" name="editor" rows="10">
+					</textarea>
+					<div class="submit-button"><button class="btn btn-primary" type="submit" onclick="submit()">Submit</button></div>
+				</div>
 	</body>
 	<script src='../bower_components/jquery/dist/jquery.min.js'></script>
 	<script src="../bower_components/ckeditor/ckeditor.js"></script>

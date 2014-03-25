@@ -13,8 +13,24 @@ body
 	padding: 10px 30px;
 }
 
+.hide-checkbox{
+	float: right;
+}
 
-#container{
+.btn-hide{
+	float: right;
+}
+
+.tutorial-options{
+	margin: 20px 0px 20px 0px;
+}
+
+.tutorial-text{
+	font-size: 125%;
+}
+
+
+#main-container{
 	width: 960px;
 	margin: 0 auto;
 }
@@ -27,8 +43,12 @@ body, input, textarea
 
 .submit-button
 {
-	margin: 20px;
-	float: right; 
+	margin: 10px;
+	float: left; 
+}
+
+.submit-button-container{
+	float: right;	
 }
 
 /**
