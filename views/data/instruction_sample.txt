@@ -1,0 +1,18 @@
+
+<h3>{{id}}. {{sentence}}</h3>
+
+<h4>Which one of the two options best describe {{highlighted_term}} in the sentence above?</h4>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="center"><input value="{{entity_1}}" type="radio" /></td>
+			<td><span class="answertext">{{entity_1}}</span></td>
+		</tr>
+		<tr>
+			<td valign="center"><input value="{{entity_2}}" type="radio"/></td>
+			<td><span class="answertext">{{entity_2}}</span></td>
+		</tr>
+	</tbody>
+</table>
+
