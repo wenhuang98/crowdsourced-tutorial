@@ -4,6 +4,7 @@
     "dependencies": {
         "bootstrap": "3.0.3",
         "jquery": "latest",
-        "ckeditor": "latest"
+        "ckeditor": "latest",
+        "datatables": "latest"
     }
 }

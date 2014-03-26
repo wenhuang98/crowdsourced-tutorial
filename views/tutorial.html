@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="css/common.css" rel="stylesheet">
+	<title>Crowdlab</title>
+	</head>
+	<body>
+				<div class="page-header" id="header">
+					<img src="img/logo.png" class="img-rounded">
+				</div>
+				<div id="main-container">
+					<h3>Edit tutorial</h3>
+					<div id="tutorials-container">
+						<div id="tutorial-instance-container-1">
+							<div class="tutorial-options">
+								<span class="tutorial-text">Tutorial 1:</span>
+								<button class="btn btn-default btn-sm btn-hide" id="hide-1" onclick="hide(this.id)">Hide</button>
+							</div>					
+							<div class="tutorial-instance" id="tutorial-1">
+								<div class="tutorial-explanation">
+									<div class="tutorial-options">
+										<span class="tutorial-text">Explanation:</span>
+									</div>
+										<div class="editable" id="explanation-editor-1" contenteditable="true">
+										</div>
+								</div>
+								<div class="tutorial-example">
+									<div class="tutorial-options">
+										<span class="tutorial-text">Example:</span>
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction('#example-editor-1')">Load instruction</button>
+									</div>
+									<div class="editable" id="example-editor-1" contenteditable="true">
+									</div>
+								</div>
+								<div class="tutorial-test">
+									<div class="tutorial-options">
+										<span class="tutorial-text">Test:</span>
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction('#test-editor-1')">Load instruction</button>
+									</div>
+									<div class="editable" id="test-editor-1" contenteditable="true">
+									</div>
+								</div>						
+							</div>
+						</div>
+					</div>
+						<div class="submit-button-container">
+							<div class="submit-button"><button class="btn btn-primary" type="submit" onclick="add()">Add</button></div>
+							<div class="submit-button"><button class="btn btn-success" type="submit" onclick="submit()">Done</button></div>
+						</div>
+				</div>
+	</body>
+	<script src='../bower_components/jquery/dist/jquery.min.js'></script>
+	<script src="../bower_components/ckeditor/ckeditor.js"></script>
+	<script src="../bower_components/ckeditor/adapters/jquery.js"></script>
+	<script src="js/tutorial.js"></script>
+</html>

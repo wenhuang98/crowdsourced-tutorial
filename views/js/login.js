@@ -2,7 +2,7 @@ $( document ).ready( function() {
 } );
 
 var submit = function(){
-	console.log("hi");
+	console.log("logged in");
 	window.location = 'instruction.html';	
 };
 
