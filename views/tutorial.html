@@ -21,26 +21,24 @@
 									<div class="tutorial-options">
 										<span class="tutorial-text">Explanation:</span>
 									</div>
-										<div id="editor-explanation-0">
-										<textarea cols="30" class="editor" name="editor" rows="10">
-										</textarea>
-									</div>
+										<div class="editable" id="explanation-editor-1" contenteditable="true">
+										</div>
 								</div>
 								<div class="tutorial-example">
 									<div class="tutorial-options">
 										<span class="tutorial-text">Example:</span>
-										<button class="btn btn-default btn-sm btn-hide" onclick="hide(this.id)">Load instruction</button>
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction('#example-editor-1')">Load instruction</button>
 									</div>
-									<textarea cols="30" class="editor" id="example-editor" name="editor" rows="10">
-									</textarea>
+									<div class="editable" id="example-editor-1" contenteditable="true">
+									</div>
 								</div>
 								<div class="tutorial-test">
 									<div class="tutorial-options">
 										<span class="tutorial-text">Test:</span>
-										<button class="btn btn-default btn-sm btn-hide" onclick="hide(this.id)">Load instruction</button>
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction('#test-editor-1')">Load instruction</button>
 									</div>
-									<textarea cols="30" class="editor" id="test-editor" name="editor" rows="10">
-									</textarea>
+									<div class="editable" id="test-editor-1" contenteditable="true">
+									</div>
 								</div>						
 							</div>
 						</div>

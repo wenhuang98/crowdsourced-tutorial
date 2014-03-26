@@ -29,6 +29,11 @@ body
 	font-size: 125%;
 }
 
+.editable {
+	border:2px solid;
+	min-height: 7em;	
+}
+
 
 #main-container{
 	width: 960px;

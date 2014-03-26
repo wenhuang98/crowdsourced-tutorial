@@ -3,7 +3,7 @@ CKEDITOR.disableAutoInline = true;
 var current_tutorial_count;
 
 $( document ).ready( function() {
-	$( '.editor' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+	$( '.editable' ).ckeditor(); // Use CKEDITOR.inline().
 	current_tutorial_count = 1;
 } );
 
@@ -24,9 +24,6 @@ var hide = function(element_id){
 		$( '#' + changing_element_id).fadeIn("slow");
 		$('#' + element_id).html('Hide');		
 	}
-	//console.log('#'+element_id);
-	//$('.tutorial-explanation').hide();
-	//console.log(element);
 };
 
 var add = function(){
@@ -42,35 +39,35 @@ var add = function(){
 									<div class="tutorial-options"> \
 										<span class="tutorial-text">Explanation:</span> \
 									</div> \
-										<div id="editor-explanation-0"> \
-										<textarea cols="30" class="editor" name="editor" rows="10"> \
-										</textarea> \
-									</div> \
+										<div class="editable" id="explanation-editor-'+current_tutorial_count+'" contenteditable="true"></div>\
 								</div> \
 								<div class="tutorial-example"> \
 									<div class="tutorial-options"> \
 										<span class="tutorial-text">Example:</span> \
-										<button class="btn btn-default btn-sm btn-hide" onclick="hide(this.id)">Load instruction</button> \
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction(\'#example-editor-' +current_tutorial_count+'\')">Load instruction</button> \
 									</div> \
-									<textarea cols="30" class="editor" id="example-editor" name="editor" rows="10">\
-									</textarea>\
+										<div class="editable" id="example-editor-'+current_tutorial_count+'" contenteditable="true"></div>\
 								</div>\
 								<div class="tutorial-test">\
 									<div class="tutorial-options">\
 										<span class="tutorial-text">Test:</span>\
-										<button class="btn btn-default btn-sm btn-hide" onclick="hide(this.id)">Load instruction</button>\
+										<button class="btn btn-default btn-sm btn-hide" onclick="load_instruction(\'#test-editor-' + current_tutorial_count +'\')">Load instruction</button>\
 									</div>\
-									<textarea cols="30" class="editor" id="test-editor" name="editor" rows="10">\
-									</textarea>\
+									<div class="editable" id="explanation-editor-' + current_tutorial_count+'" contenteditable="true"></div>\
 								</div>						\
 							</div>\
 						</div>';
 
-
-	console.log('#tutorial-instance-container-'+current_tutorial_count);
-	console.log($('#tutorial-instance-container-'+current_tutorial_count).html());
 	$('#tutorials-container').append(new_tutorial_instance);
 	$( '.editor' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+
+};
+
+var load_instruction = function(element_id){
+	console.log(element_id);
+	$.get("data/instruction_sample.txt", function(data){
+		$(element_id).html(data);
+	});
 
 };
 
